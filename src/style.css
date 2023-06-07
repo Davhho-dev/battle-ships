@@ -25,6 +25,29 @@ body {
     align-items: center;
 }
 
+.gameboard-con {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+.player-con,
+.computer-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.player-title,
+.computer-title {
+    font-family: var(--pri-ft);
+    font-size: 2rem;
+    color: var(--pri-clr);
+}
+
 [class*="sq"] {
     width: var(--square-size);
     height: var(--square-size);
@@ -33,7 +56,9 @@ body {
     border: 1px solid var(--pri-clr);
 }
 
-#player-gameboard {
+#player-gameboard,
+#computer-gameboard {
+    border: 3px solid green;
     display: flex;
     justify-content: center;
     align-items: center;
