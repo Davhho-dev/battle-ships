@@ -14,4 +14,15 @@ function createGameBoard(elem) {
     }
 }
 
-export {createGameBoard};
+function createShips(length) {
+    const shipImg = document.createElement("div");
+    shipImg.className = "ship-img";
+    for(let i = 0; i < length; i++) {
+        const shipSq = document.createElement("div");
+        shipSq.className = "ship-sq";
+        shipImg.appendChild(shipSq);
+    }
+    return shipImg;
+}
+
+export {createGameBoard, createShips};
