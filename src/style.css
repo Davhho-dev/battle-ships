@@ -6,7 +6,7 @@
 
 html,
 body {
-    min-height: 100vh;
+    height: 100%;
     background-color: black;
 }
 
@@ -16,6 +16,62 @@ body {
     --square-size: 5rem;
 }
 
+/* ---------- INITIALIZE ---------- */
+.initialize {
+    height: 100%;
+    position: relative;
+}
+
+.initialize-title {
+    height: 100%;
+    font-family: var(--pri-ft);
+    font-size: 5rem;
+    color: var(--pri-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: title-show;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+.start {
+    position: fixed;
+    top: 65%;
+    left: 45%;
+    font-family: var(--pri-ft);
+    font-size: 2.5rem;
+    width: 15rem;
+    line-height: 5rem;
+    text-align: center;
+    animation-name: title-show;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes title-show {
+    from {color: black; opacity: 0;}
+    to {color: var(--pri-clr); opacity: 100%}
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    border-top: 5px solid green;
+    border-bottom: 5px solid green;
+    animation-name: slide;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+    0% {height: 0%; top: 50%;}
+    55% {height: 100%; top: 0%;}
+    100% {opacity: 0%;}
+}
+
+/* ---------- AFTER INITIALIZATION ---------- */
 .title {
     font-family: var(--pri-ft);
     font-size: 2rem;
@@ -60,14 +116,13 @@ body {
 #player-gameboard,
 #computer-gameboard,
 .modal-gameboard {
-    border: 3px solid green;
+    /* border: 3px solid green; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 /* ---------- MODAL ---------- */
-
 dialog {
     position: fixed;
     left: 25%;
