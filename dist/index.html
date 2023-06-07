@@ -11,18 +11,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P">
 </head>
 <body>
-    <header class="title">Battleships</header>
+    <header class="title" style="display: none;">Battleships</header>
+    <div class="initialize">
+        <p class="initialize-title">Battleships</p>
+        <button class="start">Start</button>
+        <div class="slider"></div>
+    </div>
     <main class="gameboard-con">
         <div class="player-con">
-            <p class="player-title">Player</p>
+            <p class="player-title" style="display: none;">Player</p>
             <div id="player-gameboard" class="gameboard"></div>
         </div>
         <div class="computer-con">
-            <p class="computer-title">Computer</p>
+            <p class="computer-title" style="display: none;">Computer</p>
             <div id="computer-gameboard" class="gameboard"></div>
         </div>
     </main>
-    <dialog class="modal">
+    <dialog class="modal" style="display: none">
         <div class="modal-gameboard"></div>
         <div class="modal-right">
             <p class="ship-questionnaire">Place Ships</p>
