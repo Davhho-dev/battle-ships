@@ -31,7 +31,7 @@ body {
     justify-content: center;
     align-items: center;
     animation-name: title-show;
-    animation-duration: 5s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 
@@ -45,7 +45,7 @@ body {
     line-height: 5rem;
     text-align: center;
     animation-name: title-show;
-    animation-duration: 5s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 
@@ -61,7 +61,7 @@ body {
     border-top: 5px solid green;
     border-bottom: 5px solid green;
     animation-name: slide;
-    animation-duration: 5s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 
