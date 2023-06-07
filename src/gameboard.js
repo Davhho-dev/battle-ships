@@ -1,6 +1,6 @@
 const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
 
-function createGameBoard(elem, position) {
+function createGameBoard(elem) {
     for(let col = 0; col < 10; col++) {
         const column = document.createElement("div");
         column.className = `col-${letters[col]}`;
