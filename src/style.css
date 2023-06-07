@@ -12,6 +12,7 @@ body {
 :root {
     --pri-ft: "Press Start 2P";
     --pri-clr: green;
+    --square-size: 5rem;
 }
 
 .title {
@@ -19,6 +20,20 @@ body {
     font-size: 2rem;
     color: var(--pri-clr);
     margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+[class*="sq"] {
+    width: var(--square-size);
+    height: var(--square-size);
+    font-family: var(--pri-ft);
+    color: var(--pri-clr);
+    border: 1px solid var(--pri-clr);
+}
+
+#player-gameboard {
     display: flex;
     justify-content: center;
     align-items: center;
