@@ -14,15 +14,25 @@
     <header class="title">Battleships</header>
     <main class="gameboard-con">
         <div class="player-con">
-            <div class="player-title">Player</div>
+            <p class="player-title">Player</p>
             <div id="player-gameboard" class="gameboard"></div>
         </div>
         <div class="computer-con">
-            <div class="computer-title">Computer</div>
+            <p class="computer-title">Computer</p>
             <div id="computer-gameboard" class="gameboard"></div>
         </div>
     </main>
-    
+    <dialog class="modal">
+        <div class="modal-gameboard"></div>
+        <div class="modal-right">
+            <p class="ship-questionnaire">Place Ships</p>
+            <div class="ship-img"></div>
+            <div class="button-con">
+                <button class="rotate">Rotate</button>
+                <button class="next">Next</button>
+            </div>
+        </div>
+    </dialog>
     <script src="main.js"></script>
 </body>
 </html>
