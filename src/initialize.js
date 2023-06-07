@@ -1,4 +1,4 @@
-import { createGameBoard } from "./gameboard";
+import { createGameBoard, createShips } from "./gameboard";
 
 const initialize = document.querySelector(".initialize");
 const startBtn = document.querySelector(".start");
@@ -7,8 +7,10 @@ const playerTitle = document.querySelector(".player-title");
 const computerTitle = document.querySelector(".computer-title");
 const modal = document.querySelector("dialog");
 const modalGameboard = document.querySelector(".modal-gameboard");
-const playerGameboard = document.querySelector(".player-gameboard");
-const computerGameboard = document.querySelector(".gameboard-gameboard");
+const playerGameboard = document.getElementById("player-gameboard");
+const computerGameboard = document.getElementById("computer-gameboard");
+const questionnaire = document.querySelector(".ship-questionnaire");
+const shipContainer = document.querySelector(".ship-con");
 
 function initializeGame() {
     startBtn.addEventListener("click", () => {
@@ -21,6 +23,8 @@ function initializeGame() {
         createGameBoard(modalGameboard);
         createGameBoard(playerGameboard);
         createGameBoard(computerGameboard);
+        questionnaire.textContent = "Place Cruiser";
+        shipContainer.appendChild(createShips(5));
     })
 }
 
