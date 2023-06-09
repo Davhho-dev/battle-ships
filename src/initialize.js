@@ -16,10 +16,10 @@ const shipContainer = document.querySelector(".ship-con");
 const shipNames = ["Carrier", "Battleship", "Cruiser", "Submarine", "Destroyer"];
 const shipLength = [5, 4, 3, 3, 2];
 let start = 0;
+let direction = "horizontal"
 
 function initializeGame() {
     startBtn.addEventListener("click", () => {
-        let direction = "vertical";
         initialize.style.display = "none";
         title.setAttribute("style", "display: flex; justify-content: center; align-items: center;");
         playerTitle.style.display = "block";
@@ -52,6 +52,18 @@ function initializeGame() {
         questionnaire.textContent = `Place ${shipNames[start]}`;
         shipContainer.appendChild(createShips(shipLength[start]));
     });
+
+    const rotateBtn = document.querySelector(".rotate");
+    rotateBtn.addEventListener("click", () => {
+        const shipImg = document.querySelector(".ship-img");
+        if (direction === "horizontal") {
+            direction = "vertical";
+            shipImg.style.flexDirection = "column";
+        }else {
+            direction = "horizontal";
+            shipImg.style.flexDirection = "row";
+        }
+    })
 }
 
 export { initializeGame };
